@@ -81,9 +81,9 @@ public class Movie {
         this.popularity = popularity;
     }
 
-    public void getposterPath(String posterPath) {this.posterPath = posterPath;}
+    public void setPosterPath(String posterPath) {this.posterPath = posterPath;}
 
-    public String setposterPath() {return posterPath;}
+    public String getPosterPath() {return posterPath;}
 }
 
 

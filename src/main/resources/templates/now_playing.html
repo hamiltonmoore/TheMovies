@@ -14,11 +14,11 @@
     <a href ="/medium_popular_long_name">/medium-popular-long-name</a>
 </nav>
 
-<div class="movieTable">
-    <div th:each="movie : ${movies}"></div>
-    <span th:text="${movie.title}"></span>
-    <img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${movie.poster_path}"/>
+<div class="nowPlaying">
+    <tr th:each="movie : ${movies}">
+    <td th:text="${movie.title}"></td>
+        <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${movie.posterPath}"/></td>
+    </tr>
 </div>
-
 </body>
 </html>

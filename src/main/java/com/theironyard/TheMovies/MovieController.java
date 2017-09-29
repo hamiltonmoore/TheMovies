@@ -10,13 +10,22 @@ import java.util.List;
 @Controller
 public class MovieController {
 
+
     @RequestMapping("/")
     public String home() {
         return "home";
     }
 
     @RequestMapping("/medium_popular_long_name")
-    public String mediumpopularlongname() {
+    public String mediumpopularlongname(Model model) {
+        String movieUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=be2a38521a7859c95e2d73c48786e4bb";
+
+        List<Movie> picky = getMovies((movieUrl));
+        picky.stream()
+                .filter(e -> e.popularity < 80 || e.popularity > 30)
+                .filter(e -> e.title.length() > 10);
+
+        model.addAttribute("movies", picky);
         return "medium_popular_long_name";
     }
 

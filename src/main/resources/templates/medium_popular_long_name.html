@@ -14,9 +14,9 @@
         <a href ="/">home</a>
 </nav>
 <div class="pickyMovies">
-    <tr th:each="movie : ${movies}">
-    <td th:text="${movie.title}"></td>
-    <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${movie.posterPath}"/></td>
+    <tr th:each="picky : ${pickys}">
+    <td th:text="${picky.title}"></td>
+    <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${picky.posterPath}"/></td>
     </tr>
 </div>
 </body>

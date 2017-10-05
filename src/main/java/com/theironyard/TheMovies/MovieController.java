@@ -29,8 +29,6 @@ public class MovieController {
                 .filter(e -> e.title.length() > 10)
                 .collect(Collectors.toList());
 
-        System.out.println(results);  //still doesn;t print
-
         model.addAttribute("pickys", results);
         return "medium_popular_long_name";
     }
@@ -49,6 +47,3 @@ public class MovieController {
         return movieResult.results;
     }
 }
-
-//System.out.println( results == null ? "IT IS NULL!" : "IT's ALIVE!!!" );
-//        if (results != null) results.stream().forEach( m -> System.out.println(m.title));

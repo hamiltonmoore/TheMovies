@@ -5,20 +5,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="css/main.css"/>
     <title>Document</title>
 </head>
 <body>
-<h1>Now Playing!</h1>
+<div class="container">
+<div class="header">
+<h2>Now Playing!</h2>
 <nav>
     <a href ="/">home</a>
     <a href ="/medium_popular_long_name">/medium-popular-long-name</a>
 </nav>
+</div>
 
 <div class="nowPlaying">
     <tr th:each="movie : ${movies}">
     <td th:text="${movie.title}"></td>
         <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${movie.posterPath}"/></td>
     </tr>
+</div>
 </div>
 </body>
 </html>

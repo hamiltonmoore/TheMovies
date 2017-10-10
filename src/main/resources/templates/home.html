@@ -1,17 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="css/main.css"/>
     <title>Document</title>
 </head>
 <body>
-<h1>Home Page</h1>
-    <nav>
-        <a href ="/now_playing">Now Playing</a>
-        <a href ="/medium_popular_long_name">/medium-popular-long-name</a>
-    </nav>
+
+<div class="container">
+    <div class="header">
+        <h2>Movies</h2>
+        <nav>
+            <a href ="/now_playing">Now Playing</a>
+            <a href ="/medium_popular_long_name">/medium-popular-long-name</a>
+        </nav>
+    </div>
+    <div class="homePage">
+        <h2>Click on a link above to see some movies</h2>
+    </div>
+</div>
 </body>
 </html>

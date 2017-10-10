@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    padding-top: 1.5rem;
+}
+
+h2 {
+    width: 50%;
+}

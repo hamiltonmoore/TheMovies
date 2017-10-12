@@ -10,17 +10,16 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-<h1>Picky aren't you?</h1>
+    <header>
+<h2>Picky aren't you?</h2>
 <nav>
+    <a href ="/">Home</a>
     <a href ="/now_playing">Now Playing</a>
-        <a href ="/">home</a>
 </nav>
-    </div>
+    </header>
+    <div class="container">
 <div class="pickyMovies">
     <tr th:each="picky : ${pickys}">
-    <td th:text="${picky.title}"></td>
     <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${picky.posterPath}"/></td>
     </tr>
 </div>

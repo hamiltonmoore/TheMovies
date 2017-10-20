@@ -7,6 +7,15 @@ public class ResultsPage {
     int total_results;
     Object dates;
     int total_pages;
+    Movie result;
+
+    public Movie getResult() {
+        return result;
+    }
+
+    public void setResult(Movie result) {
+        this.result = result;
+    }
 
     public List<Movie> getResults() {
         return results;

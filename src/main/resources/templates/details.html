@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="/css/main.css"/>
+    <title>Movie_Details</title>
+</head>
+<body>
+<div class="detailsContainer">
+<header>
+    <h2>Movie Details!</h2>
+    <nav>
+        <a href ="/">Home</a>
+        <a href ="/medium_popular_long_name">Somewhat popular movies</a>
+        <a href ="/now_playing">Now Playing</a>
+    </nav>
+</header>
+    <div class="specificMovie">
+        <tr th:each="result : ${result}">
+            <div class="compartment">
+                <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${result.posterPath}"/></td>
+                <td><span th:text="${result.overview}"></span></td>
+            </div>
+        </tr>
+    </div>
+</div>
+
+</body>
+</html>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" type="text/css" media="all"
           href="css/main.css"/>
-    <title>Document</title>
+    <title>Now_Playing</title>
 </head>
 <body>
 
@@ -18,14 +18,18 @@
     <a href ="/medium_popular_long_name">Somewhat popular movies</a>
 </nav>
 </header>
-    <div class="container">
+<div class="container">
 <div class="nowPlaying">
     <tr th:each="movie : ${movies}">
-        <div class="compartment">
-            <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${movie.posterPath}"/></td>
+        <div class="movieBox">
+        <td><img width="150px" th:src="@{http://image.tmdb.org/t/p/original/} + ${movie.posterPath}"/></td>
+            <form th:action="@{/description/} + ${movie.id}"><button type="submit">Details</button></form>
         </div>
     </tr>
 </div>
 </div>
+
 </body>
 </html>
+
+<!--th:text="${movie.overview}" onclick="this."/> <div style="visibility: hidden;" th:text="${movie.overview}"-->

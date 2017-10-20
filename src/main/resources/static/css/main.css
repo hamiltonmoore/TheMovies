@@ -53,3 +53,34 @@ h3 {
 margin: 0 auto;
 }
 
+.detailsContainer {
+
+}
+
+.specificMovie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/camera-1149041_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 75px;
+    min-height: 100vh;
+}
+
+.compartment {
+    border: .25rem solid white;
+    background: white;
+    display: flex;
+    justify-content: center;
+    height: 12rem;
+    width: 55%;
+}
+
+span {
+    margin-left: .75rem;
+    padding-left: .75rem;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid black;
+}

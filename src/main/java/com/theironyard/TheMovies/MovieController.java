@@ -1,6 +1,7 @@
 package com.theironyard.TheMovies;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.ui.Model;
@@ -46,4 +47,16 @@ public class MovieController {
         ResultsPage movieResult = restTemplate.getForObject(route, ResultsPage.class);
         return movieResult.results;
     }
+
+    @RequestMapping("/description/{id}")
+    public String description(Model model, @PathVariable int id) {
+        List<Movie> result = getMovies(allMoviesUrl);
+        result = result.stream()
+                .filter(e -> e.id == id)
+                .collect(Collectors.toList());
+        model.addAttribute("result", result);
+        return "details";
+    }
 }
+
+// .stream().foreach(create new local resource object & map fields & save to the record (which saves to the database))

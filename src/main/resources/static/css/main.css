@@ -14,15 +14,17 @@ header {
 
 nav {
     padding-top: 1.5rem;
+    width: 30rem;
     display: flex;
-    justify-content: space-between;
-    width: 33%;
+    justify-content: center;
 }
 
 nav a {
     text-decoration: none;
     outline: none;
     color: black;
+    padding-left: 1rem;
+    padding-right: .5rem;
 }
 
 h2 {
@@ -46,6 +48,10 @@ h3 {
     margin-top: 75px;
 }
 
+.wrapper {
+    background-image: url(../images/photo-1440404653325-ab127d49abc1.jpg);
+}
+
 .nowPlaying {
     display: flex;
     flex-wrap: wrap;
@@ -64,7 +70,7 @@ margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/camera-1149041_960_720.jpg);
+    background-image: url(../images/photo-1440404653325-ab127d49abc1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 75px;
@@ -74,10 +80,12 @@ margin: 0 auto;
 .compartment {
     border: .25rem solid white;
     background: white;
+    opacity: .8;
     display: flex;
     justify-content: center;
     height: 12rem;
     width: 55%;
+
 }
 
 span {
@@ -86,4 +94,8 @@ span {
     display: flex;
     align-items: center;
     border-left: 2px solid black;
+}
+
+.active {
+    text-decoration: underline;
 }

@@ -50,7 +50,7 @@ public class MovieController {
 
     @RequestMapping("/description/{id}")
     public String description(Model model, @PathVariable int id) {
-        List<Movie> result = getMovies(allMoviesUrl);
+        List<Movie> result = getMovies(nowplayingUrl);
         result = result.stream()
                 .filter(e -> e.id == id)
                 .collect(Collectors.toList());

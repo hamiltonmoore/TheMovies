@@ -99,3 +99,16 @@ span {
 .active {
     text-decoration: underline;
 }
+
+button {
+    border: .06rem solid white;
+    color: black;
+    background-color: white;
+    opacity: .8;
+}
+
+.movieBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
